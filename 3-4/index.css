@@ -1,0 +1,28 @@
+/*CSS Document*/
+@charset "UTF-8";
+
+body {
+    background-color: lightskyblue;
+}
+
+.btn {
+    cursor:pointer;
+}
+
+body {
+    color: limegreen;
+    
+}
+
+.clicked {
+    color: mediumaquamarine;
+}
+
+.form, 
+.greetings {
+    display:none;
+}
+
+.showing {
+    display: block;
+}

@@ -1,0 +1,43 @@
+/*CSS Document*/
+@charset "UTF-8";
+
+body {
+    background-color: lightskyblue;
+}
+
+h1 {
+    color: limegreen;
+    transition: color .5s ease-in-out;
+}
+
+.clicked {
+    color: mediumaquamarine;
+}
+
+.form, 
+.greeting {   /*처음에는 안보임 -> currentUser가 저장된다면 보여질예정*/
+    display:none;
+}
+
+.showing { /*이부분이 currentUSer가 저장되면 보여질 부분*/
+    display: block;
+}
+/*이름을 입력하는 input 과 이름이 노출되는 h4 는 상황에 따라 보이거나 보여지지 않아야 하기 때문에 
+.form, .greeting이라는 class 를 추가하여 display : none 을 적용,
+보여져야할 상황에 쓰여질 .showing 이라는 class를 css에 생성.*/
+
+/*여기서 중요한 것은. greetings가 
+
+display : none인 것입니다.
+
+유저가 이름을 작성하기 전까지는
+
+이 부분이 보이지 않다가
+
+유저가 이름을 넣으면
+
+이 부분이 보이게 되면서 유저의 이름이
+
+hello 뒤에 붙게 되어
+
+유저에게 인사를 하게 되는 것.*/
