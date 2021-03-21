@@ -5,42 +5,26 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div class="js-clock">
+    <!--------------------시계---------------------------->
+        <div class ="js-clock">
             <h1>00:00</h1>
         </div>
-        <form class="js-form form">
-            <input type="text"placeholder="What`s U R Name?"/>
-        </form>
-        <h4 class = "js-greetings greetings"></h4> 
-        <!--javascript -->
-        <script src="clock.js"></script>
-        <script src="greeting.js"></script>
-        <p>
-            currentUser가 이름을 갖고 있지 않을 경우, function askForName 을 생성.<br>
-            user가 이름을 입력 후 enter를 눌렀을 때 알아차려야 함<br>
-            askForName에서 form event를 없애야함<br>
-            preventDefault()<br>이벤트 중지시키는 명령어?<br>
-            form을 제출하는 event가 발생하면 event가 document까지 올라간다.<br>
-            document는 다른곳으로간다<br>그 후 페이지는 새로고침 된다.<br>
-        </p>
-        <p>input은 많은것을 가지고 있음<br>
-            placeholder도 변경 가능 함<br>
-            value를 얻을 수도 있음<br>
-        </p>
-        <p>내게 필요한 것은 값을 가지고 페인트그리팅을 인식하는 것<br>
-            paintGreeting은 text를 필요로한다<br>
-            그래서 text를 보낼건데, 어떤거? 당연히 currentValue!<br>
-        </p>
-        <p>저렇게 하고 f5를 눌러봅시다. 그후 값을 입력후 엔터를 쳐봅시다.<br>
-            안녕,00!(hello 00)하고 인사하는 것을 볼 수 있다.<br>
-            문제는, f5를 눌러 리셋을 하면 얘가 다시 이름을 입력하라는 창을 퉤 하고 내보냄<br>
-            왜? 값을 저장시킨게 아니기 때문임<br>
-            단순히 이름을 불러오게 한거지, 저장하라고 프로그래밍 된게 아님 ㅇㅇ<br>
-        </p>
-        <p>그래서 마지막으로 이름을 저장하는 함수를 만든다</p>
-        <p>그 후 handleSubmit함수로 가서 saveName함수를 입력. 괄호안의 값은 currentValue!</p>
-        <p>다른 이야기지만 localStorage는 URLS를 기초로 동작 한다고 함.<br>
-            그래서 페북의 localstorage를 가져 올수 없다고.<br>
-        </p>
+    <script src="clock.js"></script>
+    <!--------------------인사------------------------------>
+    <form class = "js-form form">
+        <input type="text" placeholder="What`s UR Name?"/>
+    </form>
+    <h4 class = "js-greeting greeting"></h4>
+    <script src="greeting.js"></script>
+
+    <p>CSS는 전의 dir에서 copy 해 왔다.</p>
+    <p>1.if문을 보면 user이름이 없는경우, 이름을 물어봐야한다.<br>
+        그러니까, form이 보여져야함.<br>
+    </p>
+    <p>2.form에서 submit 이벤트가 있다면 페이지가 사라지면 안됨.<br>
+         2-1. 이벤트 동작을 stop시킨다<br>
+         2-2. input에 입력한 value 값은 그대로 가지고 있어야 한다.<br>
+         2-3. 2-2의 값은 localstorage에 저장시킨다.<br>
+    </p>
     </body>
 </html>
